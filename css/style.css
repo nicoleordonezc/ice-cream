@@ -47,7 +47,6 @@ header{
 
 }
 main{
-    background: green;
     padding-top: 45px;
     padding-left: 75px;
     padding-right: 75px;
@@ -59,7 +58,6 @@ main{
 }
 .article__jumping{
     width: 679px;
-    background: violet;
     display: flex;
     flex-direction: column;
 }
@@ -75,9 +73,14 @@ main{
     color: var(--color-1);
 }
 .div__buttons{
-    background: rebeccapurple;
+    display: flex;
+    padding-left: 50px;
+    align-items: center;
+    gap: 50px;
 }
 .div__buttons a{
     font-family: "Poppins-Regular";
+    font-size: 32px;
     text-decoration: none;
+    color: var(--color-1);
 }

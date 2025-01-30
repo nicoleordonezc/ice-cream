@@ -42,9 +42,42 @@ header{
 
 }
 .header__menu{
-    background: violet;
-
 }
 .header__menu img{
 
+}
+main{
+    background: green;
+    padding-top: 45px;
+    padding-left: 75px;
+    padding-right: 75px;
+
+}
+.section__container{
+    display: flex;
+    justify-content: space-between;
+}
+.article__jumping{
+    width: 679px;
+    background: violet;
+    display: flex;
+    flex-direction: column;
+}
+.article__jumping h1{
+    font-family: "Poppins-SemiBold";
+    font-size: 120px;
+    color: var(--color-1);
+    line-height: 110px;
+}
+.article__jumping p{
+    font-family: "Poppins-Medium";
+    font-size: 24px;
+    color: var(--color-1);
+}
+.div__buttons{
+    background: rebeccapurple;
+}
+.div__buttons a{
+    font-family: "Poppins-Regular";
+    text-decoration: none;
 }

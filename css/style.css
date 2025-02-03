@@ -9,6 +9,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
+    background-color: var(--color-8);
 
     /* background-color: var(--color-8); */
 }
@@ -67,6 +68,13 @@ main{
     margin-top: 111px;
 }
 
+.section__container article:nth-child(){
+    display: flex;
+    flex-direction: column; 
+    gap: 47px;
+}
+
+
 .article__jumping{
     width: 679px;
     /* background: violet; */
@@ -114,24 +122,104 @@ main{
 }
 
 
+#reviews{
+    /* background: blue; */
+    /* height: 281px; */
+    height: 221px;
+    padding-top: 18px;
+    padding-left: 18px;
+    padding-right: 27px;
+    display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(var(--cards), var(--cardHeight));
+	gap: var(--cardMargin);
+	/* padding-bottom: calc(var(--cards) * var(--cardTopPadding)); */
+	/* margin-bottom: var(--cardMargin); */
+}
+/* Oculta la barra de desplazamiento predeterminada */
+#reviews::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra de desplazamiento */
+}
+
+/* Personaliza el riel de la barra de desplazamiento */
+#reviews::-webkit-scrollbar-track {
+    background: transparent; /* Color del fondo */
+}
+
+/* Personaliza el 'thumb' de la barra de desplazamiento */
+#reviews::-webkit-scrollbar-thumb {
+    background: var(--color-1); /* Color del thumb */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estiliza el thumb cuando se pasa el cursor sobre él */
+#reviews::-webkit-scrollbar-thumb:hover {
+    background: var(--color-6);
+    cursor: grab;
+}
+#reviews::-webkit-scrollbar-thumb:active {
+    cursor: grabbing;
+}
+/* Estiliza los botones de la barra de desplazamiento (si los hay) */
+#reviews::-webkit-scrollbar-button {
+    display: none;
+}
+.div__reviews-container:nth-child(1){
+    --index: 1;
+}
+.div__reviews-container:nth-child(2){
+    --index: 2;
+
+    /* top: 20px; */
+}
+.div__reviews-container:nth-child(3){
+    --index: 3;
+    /* top: 40px; */
+}
+.div__reviews-container:nth-child(4){
+    --index: 4;
+    /* top: 60px; */
+}
 
 .article__reviews {
     /* background: red; */
-    padding: 20px;
+    overflow-y: auto;
 }
 .div__reviews-container {
     width: 345px;
     height: 202px;
     background: var(--color-1);
     border-radius: 18px;
-    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    border: 1px solid var(--color-5);
+    position: sticky;
+    top: 0px;
+    padding-top: calc(var(--index) * var(--cardToppadding));
+    z-index: var(--index);
 }
 .div__reviews-cards {
     /* background: green; */
     /* padding: 20px; */
+}
+.div__reviews-cards::after {
+   content: "x";
+   cursor: pointer;
+   font-family: "Poppins-Medium";
+   color: var(--color-1);
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 35px;
+   height: 35px;
+   background: var(--color-8);
+   border: 1px solid var(--color-6);
+   border-radius: 100%;
+   left: -18px;
+   top: -18px;
 }
 .div__reviews-profile {
     /* background: violet; */
@@ -168,6 +256,83 @@ main{
 }
 .div__reviews-stars img{
     /* background: turquoise; */
-    padding: 0;
+    padding: 0
+}
 
+.div__choose-type{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.div__choose-type h3{
+    color: var(--color-1);
+    font-family: "Poppins-Medium";
+    font-size: 20px;
+
+}
+.div__choose-type-buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.div__choose-type-buttons a{
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+    background: var(--color-4);
+    font-family: "Poppins-Thin";
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--color-1);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    backdrop-filter: blur(3px);
+}
+.section__container-products {
+    background: red;
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: column;
+}
+.div__trendy {
+    background: violet;
+}
+.div__trendy h2{
+}
+.div__trendy img{
+}
+.article__products{
+    background: green;
+    /* padding: 20px; */
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    column-gap: 52px;
+    row-gap: 59px;
+}
+.form__container-product {
+    background: orange;
+    width: 690px;
+    height: 324px;
+}
+.form__container-product img{
+}
+.div__product {
+    background: turquoise;
+}
+.div__product h3{
+}
+.div__product label{
+}
+.div__type-order {
+    background: yellow;
+}
+.div__type-order input[type="submit"]{
+}
+.div__product-amount {
+    background: olive;
+}
+.div__product-amount input[type="number"]{
 }

@@ -296,7 +296,6 @@ main{
     position: absolute;
     top: -12px;
     right: -2px;
-    
 }
 .article__products{
     /* background: green; */
@@ -329,11 +328,13 @@ main{
 .form__container-product:active h3,
 .form__container-product:active span,
 .form__container-product:active input[type="submit"],
-.form__container-product:active label{
+.form__container-product:active label,
+.form__container-product:active input[type="number"]{
     background: var(--color-1);
     color: var(--color-2);
 }
-.form__container-product:active input[type="submit"]{
+.form__container-product:active input[type="submit"], 
+.form__container-product:active input[type="number"]{
     outline: 1px solid var(--color-2);
 }
 .form__container-product img{
@@ -387,6 +388,7 @@ main{
     width: 309px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .div__product-amount label{
     color: var(--color-1);
@@ -394,6 +396,12 @@ main{
     font-size: 28px;
 }
 .div__product-amount input[type="number"]{
+    border-radius: 10px;
+    border: 1px solid var(--color-1);
+    background: transparent;
+    color: var(--color-1);
+    width: 84px;
+    height: 29px;
 }
 
 footer{
@@ -402,6 +410,7 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 51px;
     height: 100px;
 }
 footer p{
